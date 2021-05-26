@@ -1,0 +1,21 @@
+<%-include('../partials/header')%>
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<%-include('../partials/nav')%>
+	<main>
+	<h1>All Products</h1>
+	<p>Number of Series: <%=shows.length%></p>
+<div class="container">
+		<%shows.forEach((a)=>{%>
+<article>
+<img src="<%=a.image%>">
+    <h1><%=a.title%>/=</h1>
+        <p><%=a.price%>/=</p>
+<a href="/series/<%=a._id%>">View More</a>
+</article>
+	<%})%>
+</div>
+
+	
+	</main>
+	<%-include('../partials/footer')%>
+

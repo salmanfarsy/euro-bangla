@@ -1,0 +1,23 @@
+<%-include('../partials/header')%>
+	<link rel="stylesheet" type="text/css" href="/css/add.css">
+	<%-include('../partials/nav')%>
+	<main>
+	<h1>Fill Up the Form</h1>
+	<form action="/series" method="POST">
+       <label>Product Name: </label>
+		<input type="text" name="series[title]">
+		<label>image: </label>
+		<input type="text" name="series[image]">
+		<label>Price: </label>
+		<input type="number" name="series[price]">
+		<label for="series[catagory]">Catagory: </label>
+<select id="catagory" name="series[catagory]">
+	<option value="pants">Pants</option>
+	<option value="shirts">Shirts</option>
+</select>	
+<label>Description</label>
+<textarea name="series[review]"></textarea>
+<button>Post</button>
+	</form>
+	</main>
+	<%-include('../partials/footer')%>

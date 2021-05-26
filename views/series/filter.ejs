@@ -1,0 +1,20 @@
+<%-include('../partials/header')%>
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<%-include('../partials/nav')%>
+	<main>
+	<h1><%=shows[0].catagory.toUpperCase()%> TV series</h1>
+	<p>Number of Series: <%=shows.length%></p>
+<div class="container">
+		<%shows.forEach((a)=>{%>
+<article>
+<h1><%=a.title%></h1>
+<img src="<%=a.image%>">
+<a href="/series/<%=a._id%>">View More</a>
+</article>
+	<%})%>
+</div>
+
+	
+	</main>
+	<%-include('../partials/footer')%>
+

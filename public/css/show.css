@@ -1,0 +1,110 @@
+body{
+	background-color: rgba(0, 0, 0, .1);
+}
+img{
+	width: 100%;
+}
+
+.show {
+	width: 50%;
+	margin: 15px auto;
+	font-size: var(--normal);
+	background-color: var(--show-2);
+	border-radius: 5px;
+	box-shadow: 0 10px 20px grey;
+}
+.show h1{
+	background-color: var(--show-1);
+}
+.show h4{
+	background-color: var(--show-2);
+}
+.show h2{
+	background-color: var(--show-3);
+}
+.show h3{
+	background-color: var(--show-4);
+}
+.show p{
+	background-color: var(--show-3)
+}
+.show a{
+	display: inline-block;
+	border: 2px solid var(--purple);
+	color: var(--purple);
+	font-size: var(--normal);
+	padding: 5px 10px;
+	margin: 10px auto;
+	border-radius: 10px;
+}
+
+.show a:hover{
+	background-color: var(--purple);
+	color: white;
+}
+
+.show a:active{
+	background-color: var(--dark-purple);
+	border-color: var(--dark-purple);
+}
+.show form{
+	display: inline-block;
+}
+.show button{
+	background-color: transparent;
+	border: 2px solid var(--red);
+	color: var(--red);
+	font-size: var(--normal);
+	border-radius: 10px;
+	padding: 5px 10px;
+}
+.show button:hover{
+background-color: var(--red);
+color: white;
+cursor: pointer;
+}
+
+.show button:active{
+	background-color: var(--dark-red);
+	border-color: var(--dark-red);
+}
+
+.comment button{
+	font-size: calc(var(--normal) - 10px);
+	color: var(--green);
+	border-color: var(--green);
+}
+.comment button:hover{
+	color: white;
+	background-color: var(--green);
+}
+.comment button:active{
+	background-color: var(--dark-green);
+	border-color: var(--dark-green);
+}
+.comment input{
+	background-color: transparent;
+	border-color: transparent;
+	border-bottom: 1px solid var(--dark-orange);
+	text-align: left;
+}
+.comment input:focus{
+	outline: transparent;
+}
+
+.comment a, .comment button{
+	--normal:0.8em;
+	font-size: var(--normal);
+	border: none;
+}
+#comment{
+	display: none;
+}
+#comment.on{
+	display: block;
+}
+.show .order{
+	display: block;
+	width: 50%;
+	margin: 10px auto;
+}

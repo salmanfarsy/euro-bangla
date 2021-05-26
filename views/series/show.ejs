@@ -1,0 +1,52 @@
+<%-include('../partials/header')%>
+	<link rel="stylesheet" type="text/css" href="/css/show.css">
+	<script type="text/javascript" src="/js/show.js" defer></script>
+	<%-include('../partials/nav')%>
+	<main>
+
+<article class="show">
+<h1><%=show.title%></h1>
+<p>posted by <%=show.author.username%></p>
+<img src="<%=show.image%>">
+<h4>Catagory: <%=show.catagory%></h4>
+<h3>Price : <%=show.price%> /=</h3>
+<p>Description: <%=show.review%></p>
+<%if(show.author.id.equals(user._id) || user.isAdmin){%>
+<a href="/series/<%=show._id%>/edit">Edit</a>
+<form action="/series/<%=show._id%>?_method=DELETE" method="Post">
+	<button>delete</button>
+</form>
+<%}%>
+<a href="<%=show._id%>/order" class="order">Order Now</a>
+
+<div class="comment">
+<form action="/series/<%=show._id%>/comment" method="POST">
+	<label>Reviews</label>
+	<input type="text" name="comment[text]">
+	<button>Add</button>
+</form>	
+<h3>Reviews (<%=show.comment.length%>) <button id="toggle">show</button></h3>
+<div id="comment">
+<%show.comment.forEach((a)=>{%>
+<p><em><%=a.author.username%></em> : <%=a.text%>
+	<%if(a.author.id.equals(user._id) || user.isAdmin){%>
+
+	<form action="/series/<%=show._id%>/comment/<%=a._id%>?_method=DELETE" method="POST">
+		<a href="/series/<%=show._id%>/comment/<%=a._id%>/edit">Edit</a>
+		<button>Delete</button>
+	</form>
+	<%}%>
+</p>
+<%})%>	
+</div>
+
+</div>
+
+</article>
+
+
+
+	
+	</main>
+	<%-include('../partials/footer')%>
+

@@ -1,0 +1,71 @@
+main{
+	font-size: var(--normal);
+
+}
+form{
+	width: 60%;
+	margin: 10px auto;
+	background-color: rgba(0, 0, 0, .4);
+	color: white;
+	box-shadow: 5px 5px 10px grey;
+	border-radius: 5px;
+
+
+}
+label{
+	width: 20%;
+	font-size: var(--normal)
+}
+input{
+	width: 90%;
+padding: 1.5em;
+margin-top: 1em;
+text-align: left;
+background-color: transparent;
+border-color: transparent;
+border-bottom: 2px solid var(--orange);
+}
+input:focus{
+	outline: none;
+	border-bottom: 4px solid var(--dark-orange); 
+	background-color: transparent;
+}
+
+select{
+	--normal:calc(0.5em + 5px);
+	width: 20%;
+	padding: 1em;
+	font-size: var(--normal);
+	margin: 25px;
+	margin-right: 60%;
+	background-color: var(--orange);
+	color: white;
+}
+textarea{
+	padding: 2em;
+	margin: 20px;
+	text-align: left;
+	width: 90%;
+	background-color: black;
+	color: white;
+}
+button{
+	display: block;
+	display: inline-block;
+	color: var(--gold);
+	border: 3px solid var(--gold);
+	padding: 10px;
+	font-size: var(--normal);
+	border-radius: 10px;
+	margin: 10px auto;
+	background-color: transparent;
+}
+button:hover{
+	color: var(--white);
+	background-color: var(--gold);
+	cursor: pointer;
+}
+button:active{
+		background-color: var(--dark-gold);
+	border-color: var(--dark-gold);
+}

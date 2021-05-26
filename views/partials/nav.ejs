@@ -1,0 +1,35 @@
+</head>
+<body>
+<nav>
+	<h1>Euro-Bangla</h1>
+<ul>
+	<li><a href="/">Home</a></li>
+	<li id="subBtn">Catagory
+		<ul class="submenu off">
+			<li><a href="/series/filter/live-action">Pants</a></li>
+			<li><a href="/series/filter/anime">Shirts</a></li>
+		</ul>
+	</li>
+	<li><a href="/series">All Product</a></li>
+		<%if(user){%>
+		<li><%=user.username%> is Active 
+			<% if(user.isAdmin){%>
+			<span>[Admin]</span>
+				<a href="/series/add">Add New Product</a>
+		<% }%>
+		</li>
+		<li><a href="/logout">Logout</a></li>
+		<%} else{%>
+		<li><a href="/login">Login</a></li>
+		<li><a href="/register"> Register</a></li>
+		<%}%>
+</ul>
+</nav>
+<section class="message">
+	<%if(error.length > 0){%>
+	<h1 class="bad"><%=error%></h1>
+	<%}%>
+	<%if(done.length > 0){%>
+	<h1 class="good"><%=done%></h1>
+	<%}%>
+</section>
