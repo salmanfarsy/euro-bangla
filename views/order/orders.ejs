@@ -1,0 +1,22 @@
+<%-include('../partials/header')%>
+	<link rel="stylesheet" type="text/css" href="/css/order.css">
+	<%-include('../partials/nav')%>
+    <h1>All the Orders</h1>
+<%orders.forEach((x)=>{%>
+    <div class="card">
+        <h1>Name:<%=x.customer%></h1>
+        <address>Address:<%=x.address%> </address>
+        <h4>Phone Number : <%=x.phone%></h4>
+        <p>Quantity: <%=x.quantity%></p>
+        <h3>Payment:<%=x.payment%></h3>
+        <h2>Product: <%=x.product.title%></h2>
+        <a href="/series/<%=x.product._id%>">Product details</a>
+        <button>Delete</button>
+        <form action="/order/<%= x._id %>?_method=DELETE" method="POST"
+            class="hide">
+        <button>Delete</button>
+        </form>
+    </div>
+<%})%>
+
+    <%-include('../partials/footer')%>

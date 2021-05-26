@@ -4,7 +4,7 @@
 	<main>
 <h1>Product Name: <%=show.title%></h1>
 	<h2>Fill Up the Form</h2>
-	<form action="<%=show._id%>/order" method="post">
+	<form action="/series/<%=show._id%>/order" method="post">
 		<div>
 			<label>Name:</label>
 			<input type="text" name="order[customer]">
@@ -12,6 +12,10 @@
 		<div>
 			<label>Address:</label>
 			<input type="text" name="order[address]">
+		</div>
+		<div>
+			<label>Phone Number:</label>
+			<input type="Number" name="order[phone]">
 		</div>
 		<div>
 			<label>Quantity:</label>

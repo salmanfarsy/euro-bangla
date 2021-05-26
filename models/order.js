@@ -3,8 +3,14 @@ const mongoose = require('mongoose');
 const orderSchema = new mongoose.Schema({
 	customer:String,
 	address:String,
+	phone:Number,
 	quantity:Number,
-	payment:String
+	payment:String,
+	product:{
+		type:mongoose.Schema.Types.ObjectId,
+		ref:'Series'
+	},
+	isDone:{type:Boolean, default:false}
 });
 
 module.exports = mongoose.model('Order', orderSchema);
