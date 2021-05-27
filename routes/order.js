@@ -1,3 +1,4 @@
+const e = require('express');
 const express = require('express');
 const router = express.Router();
 const Order = require('../models/order');
@@ -16,6 +17,7 @@ Series.findById(req.params.id, (err, show)=>{
 router.post('/series/:id/order', (req, res)=>{
 	const input = req.body.order;
 	input.product = req.params.id;
+	input.user = req.user.username;
 	Order.create(input, (err, done)=>{
 		if(err){
 			console.log(err)
@@ -35,6 +37,16 @@ router.post('/series/:id/order', (req, res)=>{
 			}
 		})
 		
+	});
+
+	router.delete('/order/:id', (req, res)=>{
+		Order.findByIdAndDelete(req.params.id, (err, done)=>{
+			if(err){
+				console.log(err)
+			} else {
+				res.redirect('back')
+			}
+		})
 	})
 
 

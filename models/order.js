@@ -10,7 +10,8 @@ const orderSchema = new mongoose.Schema({
 		type:mongoose.Schema.Types.ObjectId,
 		ref:'Series'
 	},
-	isDone:{type:Boolean, default:false}
+	isDone:{type:Boolean, default:false},
+	user:String
 });
 
 module.exports = mongoose.model('Order', orderSchema);
