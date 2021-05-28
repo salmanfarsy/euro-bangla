@@ -8,9 +8,12 @@
 		<%shows.forEach((a)=>{%>
 <article>
 <img src="<%=a.image%>">
-    <h1><%=a.title%>/=</h1>
-        <p><%=a.price%>/=</p>
+<div class="text">
+	<h1>Product: <%=a.title%>/=</h1>
+	<p>Price : <%=a.price%>/=</p>
 <a href="/series/<%=a._id%>">View More</a>
+</div>
+   
 </article>
 	<%})%>
 </div>

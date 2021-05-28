@@ -7,7 +7,8 @@ const userSchema = mongoose.Schema({
     isAdmin:{
         type:Boolean,
         default:false
-    }
+    },
+    name:String
 });
 
 userSchema.plugin(monpass);

@@ -4,19 +4,31 @@
 	<main>
 	<h1>Fill Up the Form</h1>
 	<form action="/series" method="POST">
-       <label>Product Name: </label>
-		<input type="text" name="series[title]">
+		<div>
+			<label>Product Name: </label>
+			<input type="text" name="series[title]">
+		</div>
+     <div>
 		<label>image: </label>
 		<input type="text" name="series[image]">
+	 </div>
+	<div>
 		<label>Price: </label>
 		<input type="number" name="series[price]">
+	</div>
+	<div>
 		<label for="series[catagory]">Catagory: </label>
 <select id="catagory" name="series[catagory]">
 	<option value="pants">Pants</option>
 	<option value="shirts">Shirts</option>
 </select>	
-<label>Description</label>
-<textarea name="series[review]"></textarea>
+	</div>
+<div>
+	<label>Description</label>
+	<textarea name="series[review]"></textarea>
+</div>
+
+
 <button>Post</button>
 	</form>
 	</main>

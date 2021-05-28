@@ -6,12 +6,14 @@ img{
 }
 
 .show {
-	width: 50%;
+	width: 90%;
 	margin: 15px auto;
+	padding: 20px;
 	font-size: var(--normal);
-	background-color: var(--show-2);
+	/* background-color: var(--show-2); */
 	border-radius: 5px;
 	box-shadow: 0 10px 20px grey;
+
 }
 .show h1{
 	background-color: var(--show-1);
@@ -107,4 +109,20 @@ cursor: pointer;
 	display: block;
 	width: 50%;
 	margin: 10px auto;
+}
+.container{
+	display: flex;
+	justify-content: space-around;
+}
+.col1{
+width: 50%;
+}
+.col2{
+width: 30%;
+}
+.col1, .col2{
+	margin: 10px;
+}
+.col2>*{
+	padding: 20px;
 }

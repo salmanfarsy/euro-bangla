@@ -12,12 +12,17 @@ form{
 
 
 }
+form div{
+	display: flex;
+	align-items: center;
+	padding: 10px;
+}
 label{
-	width: 20%;
+	width: 40%;
 	font-size: var(--normal)
 }
 input{
-	width: 90%;
+	width: 60%;
 padding: 1.5em;
 margin-top: 1em;
 text-align: left;
@@ -68,4 +73,13 @@ button:hover{
 button:active{
 		background-color: var(--dark-gold);
 	border-color: var(--dark-gold);
+}
+form{
+	background-color: #ffc93c;
+	margin-top: 25vh;
+	
+}
+
+button{
+	--gold:#ba135d;
 }

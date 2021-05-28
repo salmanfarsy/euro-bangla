@@ -12,7 +12,7 @@
 	</li>
 	<li><a href="/series">All Product</a></li>
 		<%if(user){%>
-		<li><%=user.username%> is Active 
+		<li><%=user.name%> is Active 
 			<% if(user.isAdmin){%>
 			<span>[Admin]</span>
 				<a href="/series/add">Add New Product</a>

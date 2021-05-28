@@ -1,5 +1,5 @@
 form{
-	background-color: black;
+	background-color: #ffc93c;
 	margin-top: 25vh;
 	
 }
@@ -7,4 +7,7 @@ input{
 width: 80%;
 font-size: 1em;
 color: white;
+}
+button{
+	--gold:#ba135d;
 }
