@@ -1,11 +1,11 @@
 :root{
---orange:orange;
+--orange:rgb(197, 197, 197);
 --white:white;
 --normal:calc(1em + 4px);
 --dark-orange :#BA4A00;
---light-orange:#E59866;
+--light-orange:#ffffff;
 --grey:#CACFD2 ;
---gold:  gold ;
+--gold:  rgb(255, 115, 0) ;
 --dark-gold : #F5B041 ;
 --show-1:#B7950B ;
 --show-2:#D4AC0D;

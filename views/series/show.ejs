@@ -12,7 +12,9 @@
 		</div>
 		<div class="col2">
 			<h1>Product: <%=show.title%></h1>
+			<%if(user.isAdmin){%>
 			<p>posted by <%=show.author.username%></p>
+			<%}%>
 			
 			<h4>Catagory: <%=show.catagory%></h4>
 			<h3>Price : <%=show.price%> /=</h3>

@@ -10,6 +10,8 @@
 <img src="<%=a.image%>">
 <div class="text">
 	<h1>Product: <%=a.title%>/=</h1>
+	<p class="dis">Price : <%- parseInt(a.price) + ( (parseInt(a.price) * 15)/100) %>/=</p>
+	<p><em>15% Discount</em></p>
 	<p>Price : <%=a.price%>/=</p>
 <a href="/series/<%=a._id%>">View More</a>
 </div>

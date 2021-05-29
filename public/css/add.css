@@ -75,7 +75,8 @@ button:active{
 	border-color: var(--dark-gold);
 }
 form{
-	background-color: #ffc93c;
+	background-color: white;
+	color: coral;
 	margin-top: 25vh;
 	
 }
