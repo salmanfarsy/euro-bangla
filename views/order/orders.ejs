@@ -1,10 +1,12 @@
 <%-include('../partials/header')%>
 	<link rel="stylesheet" type="text/css" href="/css/order.css">
 	<%-include('../partials/nav')%>
+    <main>
     <h1>All the Orders</h1>
-<%orders.forEach((x)=>{%>
+    <div class="container">
+<%orders.forEach((x, i)=>{%>
     <div class="card">
-        <h1>Name:<%=x.customer%></h1>
+        <h1><%=i+1%>. Name:<%=x.customer%></h1>
         <h4>E-mail: <%=x.user%></h4>
         <address>Address:<%=x.address%> </address>
         <h4>Phone Number : <%=x.phone%></h4>
@@ -21,5 +23,6 @@
         </form>
     </div>
 <%})%>
-
+</div>
+</main>
     <%-include('../partials/footer')%>

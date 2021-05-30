@@ -66,19 +66,10 @@ router.delete('/series/:id',middleware.post, (req, res)=>{
 		}
 	})
 })
-//anime
-router.get('/series/filter/anime', (req, res)=>{
-	Series.find({catagory : 'anime'}, (err, shows)=>{
-		if(err){
-			console.log(err)
-		} else{
-			res.render('series/filter', {shows : shows})
-		}
-	})
-} );
-//live action
-router.get('/series/filter/live-action', (req, res)=>{
-	Series.find({catagory:'anime'},(err, shows)=>{
+
+//Filter
+router.get('/series/filter/:pro', (req, res)=>{
+	Series.find({catagory:req.params.pro},(err, shows)=>{
 		if(err){
 			console.log(err)
 		} else{

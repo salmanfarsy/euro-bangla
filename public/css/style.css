@@ -7,10 +7,10 @@
 --grey:#CACFD2 ;
 --gold:  rgb(255, 115, 0) ;
 --dark-gold : #F5B041 ;
---show-1:#B7950B ;
---show-2:#D4AC0D;
---show-3:#F1C40F ;
---show-4:#F4D03F;
+--show-1:rgb(206, 206, 206);
+--show-2:rgb(196, 196, 196);
+--show-3:rgb(156, 156, 156) ;
+--show-4:rgb(124, 124, 124);
 --purple:#76448A  ;
 --dark-purple:#5B2C6F;
 --red :#C0392B ;
